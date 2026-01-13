@@ -13,16 +13,15 @@
 
 ## 🚀 About Me
 I am a Computer Science student passionate about **Artificial Intelligence, Deep Learning**, and **real-world problem solving**.  
-I enjoy building practical projects in **Agriculture AI, Medical Systems**, and mobile applications.
 
 ---
 
 ## 🧠 Areas of Interest
 - Artificial Intelligence & Deep Learning  
 - Computer Vision  
-- Medical & Healthcare Applications  
-- Agricultural Disease Detection  
-- Brain Signal & Neural Network Research  
+- Mobile App With Expo React Native
+- Neural Network Research
+- MySQL Database
 
 ---
 
