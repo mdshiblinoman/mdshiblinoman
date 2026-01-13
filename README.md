@@ -64,19 +64,19 @@ I am a Computer Science student passionate about **Artificial Intelligence, Deep
 
 </div>
 
-
----
-
-## 📈 Currently Learning
-- Advanced Deep Learning Architectures  
-- Research Paper Reading & Implementation  
-- Model Optimization & Deployment  
-
 ---
 
 ## 📫 Connect With Me
 - 🔗 GitHub: https://github.com/mdshiblinoman  
 - 💼 LinkedIn: https://www.linkedin.com/in/md-shibli-noman-sarkar-34baa9274
+
+---
+
+<p align="center">
+    <img src="https://komarev.com/ghpvc/?username=mdshiblinoman&color=blue">
+    <img  src="https://img.shields.io/github/followers/mdshiblinoman?label=Follow" alt="LinkedIn Badge"/>
+    <img src="https://img.shields.io/github/stars/mdshiblinoman?affiliations=OWNER%2CCOLLABORATOR" alt="LinkedIn Badge"/>
+</p>
 
 ---
 
