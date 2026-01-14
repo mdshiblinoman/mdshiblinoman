@@ -72,13 +72,5 @@ I am a Computer Science student passionate about **Artificial Intelligence, Deep
 
 ---
 
-<p align="center">
-    <img src="https://komarev.com/ghpvc/?username=mdshiblinoman&color=blue">
-    <img  src="https://img.shields.io/github/followers/mdshiblinoman?label=Follow" alt="LinkedIn Badge"/>
-    <img src="https://img.shields.io/github/stars/mdshiblinoman?affiliations=OWNER%2CCOLLABORATOR" alt="LinkedIn Badge"/>
-</p>
-
----
-
 ⭐ **Thanks for visiting my profile!**  
 If you like my work, feel free to ⭐ repositories and connect 🤝
