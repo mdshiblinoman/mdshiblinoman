@@ -58,9 +58,11 @@ I am a Computer Science student passionate about **Artificial Intelligence, Deep
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=mdshiblinoman&show_icons=true&theme=tokyonight" height="165"/>
+## 📫 Connect With Me
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mdshiblinoman&layout=compact&theme=tokyonight" height="165"/>
+[![GitHub](https://img.shields.io/badge/GitHub-mdshiblinoman-black?logo=github)](https://github.com/mdshiblinoman)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Shibli%20Noman-blue?logo=linkedin)](https://www.linkedin.com/in/md-shibli-noman-sarkar-34baa9274)
+
 
 </div>
 
