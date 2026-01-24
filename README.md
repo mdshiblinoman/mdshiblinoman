@@ -53,24 +53,9 @@ I am a Computer Science student passionate about **Artificial Intelligence, Deep
  
 ---
 
-## 📊 GitHub Stats
-<div align="center">
-
-<div align="center">
-
 ## 📫 Connect With Me
-
 [![GitHub](https://img.shields.io/badge/GitHub-mdshiblinoman-black?logo=github)](https://github.com/mdshiblinoman)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Shibli%20Noman-blue?logo=linkedin)](https://www.linkedin.com/in/md-shibli-noman-sarkar-34baa9274)
-
-
-</div>
-
----
-
-## 📫 Connect With Me
-- 🔗 GitHub: https://github.com/mdshiblinoman  
-- 💼 LinkedIn: https://www.linkedin.com/in/md-shibli-noman-sarkar-34baa9274
 
 ---
 
