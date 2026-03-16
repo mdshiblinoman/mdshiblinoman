@@ -39,7 +39,6 @@ I am a Computer Science student passionate about **Artificial Intelligence, Deep
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas)
 ![Scikit--Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat&logo=scikit-learn)
 
-
 ### 📱 App Development
 ![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat&logo=react)
 ![Expo](https://img.shields.io/badge/Expo-000020?style=flat&logo=expo)
@@ -49,8 +48,18 @@ I am a Computer Science student passionate about **Artificial Intelligence, Deep
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql)
 ![Firebase](https://img.shields.io/badge/Firebase-ffca28?style=flat&logo=firebase)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git)
-![Linux](https://img.shields.io/badge/Linux-black?style=flat&logo=linux) 
- 
+![Linux](https://img.shields.io/badge/Linux-black?style=flat&logo=linux)
+
+---
+
+## 📊 GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mdshiblinoman&show_icons=true&theme=radical)
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=mdshiblinoman&theme=radical)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mdshiblinoman&layout=compact&theme=radical)
+
 ---
 
 ## 📫 Connect With Me
