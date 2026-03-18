@@ -21,6 +21,7 @@ I am a Computer Science student passionate about **Artificial Intelligence, Deep
 - Computer Vision  
 - Mobile App With Expo React Native
 - Neural Network Research
+- Brain Signal Research
 - MySQL Database
 
 ---
@@ -35,6 +36,8 @@ I am a Computer Science student passionate about **Artificial Intelligence, Deep
 
 ### 🤖 AI / ML
 ![PyTorch](https://img.shields.io/badge/PyTorch-red?style=flat&logo=pytorch)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow)
+![Keras](https://img.shields.io/badge/Keras-D00000?style=flat&logo=keras)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas)
 ![Scikit--Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat&logo=scikit-learn)
