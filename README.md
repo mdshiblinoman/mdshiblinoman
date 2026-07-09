@@ -5,24 +5,22 @@
 ### 🎓 CSE Student | 🤖 Aspiring AI & Deep Learning Engineer  
 
 📍 Bangladesh 🇧🇩  
-🌱 Learning PyTorch, Machine Learning & Computer Vision  
 
 </div>
 
 ---
 
-## 🚀 About Me
-I am a Computer Science student passionate about **Artificial Intelligence, Deep Learning**, and **real-world problem solving**.  
+## 🚀 About ME
 
----
+I am a Computer Science and Engineering student with a strong passion for Artificial Intelligence, Machine Learning, Deep Learning, and Data Science. I am deeply interested in understanding how intelligent systems work and how advanced technologies can be applied to solve real-world challenges.
 
-## 🧠 Areas of Interest
-- Artificial Intelligence & Deep Learning  
-- Computer Vision  
-- Mobile App With Expo React Native
-- Neural Network Research
-- Brain Signal Research
-- MySQL Database
+My academic journey has allowed me to explore various domains, including Machine Learning, Deep Learning, Computer Vision, Natural Language Processing (NLP), Data Analytics, and Software Development. I enjoy working on projects that combine theoretical knowledge with practical implementation, enabling me to develop innovative and impactful solutions.
+
+I am particularly fascinated by the potential of AI to transform industries such as healthcare, education, finance, and automation. Through continuous learning, research, and hands-on experimentation, I strive to stay updated with the latest advancements in AI and emerging technologies.
+
+Beyond technical skills, I value problem-solving, critical thinking, teamwork, and lifelong learning. I am always eager to take on new challenges, collaborate with others, and contribute to projects that create meaningful value for society.
+
+My long-term goal is to become an AI Engineer and Researcher, leveraging cutting-edge technologies to build intelligent systems that positively impact people's lives and address complex real-world problems.
 
 ---
 
@@ -67,7 +65,7 @@ I am a Computer Science student passionate about **Artificial Intelligence, Deep
 
 ## 📫 Connect With Me
 [![GitHub](https://img.shields.io/badge/GitHub-mdshiblinoman-black?logo=github)](https://github.com/mdshiblinoman)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Shibli%20Noman-blue?logo=linkedin)](https://www.linkedin.com/in/md-shibli-noman-sarkar-34baa9274)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Shibli%20Noman-blue?logo=linkedin)]([https://www.linkedin.com/in/md-shibli-noman-sarkar-34baa9274](https://www.linkedin.com/in/mdshiblinoman)
 
 ---
 
