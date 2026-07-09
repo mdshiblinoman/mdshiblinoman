@@ -65,7 +65,7 @@ My long-term goal is to become an AI Engineer and Researcher, leveraging cutting
 
 ## 📫 Connect With Me
 [![GitHub](https://img.shields.io/badge/GitHub-mdshiblinoman-black?logo=github)](https://github.com/mdshiblinoman)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Shibli%20Noman-blue?logo=linkedin)]([https://www.linkedin.com/in/md-shibli-noman-sarkar-34baa9274](https://www.linkedin.com/in/mdshiblinoman)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Shibli%20Noman-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mdshiblinoman)
 
 ---
 
