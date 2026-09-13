@@ -70,6 +70,16 @@ a {
     border-radius: 50%;
 }
 
+.brand-photo {
+    display: block;
+    width: 38px;
+    height: 38px;
+    border: 2px solid var(--ink);
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
 .brand strong {
     font-weight: 800;
 }
