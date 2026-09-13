@@ -77,7 +77,7 @@ a {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 31px;
+    gap: 24px;
     font-size: 12px;
     font-weight: 700;
 }
@@ -92,11 +92,21 @@ a {
     color: var(--coral);
 }
 
+.nav-links a[aria-current="page"] {
+    opacity: 1;
+    color: var(--coral);
+}
+
 .nav-links .nav-contact {
     padding: 12px 17px;
     color: var(--paper);
     background: var(--ink);
     opacity: 1;
+}
+
+.nav-links .nav-contact[aria-current="page"] {
+    color: var(--paper);
+    background: var(--coral);
 }
 
 .nav-contact span,
@@ -322,8 +332,44 @@ h2 em {
     font-size: 16px;
 }
 
+.page-hero {
+    padding: 170px 0 90px;
+    background:
+        radial-gradient(circle at 82% 31%, rgba(233, 212, 118, .28), transparent 24%),
+        linear-gradient(135deg, rgba(231, 105, 77, .08), transparent 38%),
+        var(--paper);
+}
+
+.page-hero h1 {
+    max-width: 870px;
+    margin: 30px 0 0;
+    font-size: clamp(3.5rem, 7vw, 7rem);
+    line-height: .94;
+    letter-spacing: -.08em;
+}
+
+.page-hero h1 em,
+.research-copy h1 em,
+.contact-section h1 em {
+    color: var(--coral);
+    font-style: normal;
+}
+
+.page-hero-dark {
+    color: var(--paper);
+    background: var(--ink);
+}
+
+.page-hero-dark .eyebrow {
+    color: #a8b0aa;
+}
+
 .section {
     padding: 145px 0;
+}
+
+.page-section-reset {
+    padding-top: 145px;
 }
 
 .split-layout {
@@ -401,6 +447,57 @@ h2 em {
 .text-link:hover {
     color: var(--coral);
     border-color: var(--coral);
+}
+
+.task-links-section {
+    padding-bottom: 120px;
+}
+
+.task-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: 70px;
+    background: var(--line);
+    border: 1px solid var(--line);
+}
+
+.task-card {
+    min-height: 260px;
+    padding: 26px;
+    background: var(--paper);
+    transition: color .2s, background .2s, transform .2s;
+}
+
+.task-card span {
+    color: var(--coral);
+    font: 11px var(--mono);
+    letter-spacing: .08em;
+}
+
+.task-card h3 {
+    margin: 70px 0 14px;
+    font-size: clamp(1.7rem, 3vw, 2.7rem);
+    line-height: 1;
+    letter-spacing: -.05em;
+}
+
+.task-card p {
+    max-width: 260px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.task-card:hover {
+    color: var(--paper);
+    background: var(--ink);
+    transform: translateY(-4px);
+}
+
+.task-card:hover p {
+    color: #a8b0aa;
 }
 
 .skills-section {
@@ -607,7 +704,8 @@ h2 em {
     line-height: 1;
 }
 
-.research-copy h2 {
+.research-copy h2,
+.research-copy h1 {
     max-width: 650px;
     margin: 0 0 24px;
     font-size: clamp(2.8rem, 5vw, 5.3rem);
@@ -615,7 +713,8 @@ h2 em {
     letter-spacing: -.07em;
 }
 
-.research-copy h2 em {
+.research-copy h2 em,
+.research-copy h1 em {
     color: var(--yellow);
 }
 
@@ -648,6 +747,10 @@ h2 em {
     color: var(--paper);
     font-size: 34px;
     font-weight: 400;
+}
+
+.research-page-band {
+    padding-top: 185px;
 }
 
 .stats-grid {
@@ -796,15 +899,22 @@ h2 em {
     color: #a8b0aa;
 }
 
-.contact-section h2 {
+.contact-section h2,
+.contact-section h1 {
     margin: 55px 0 42px;
     font-size: clamp(3.5rem, 8vw, 8rem);
     line-height: .9;
     letter-spacing: -.09em;
 }
 
-.contact-section h2 em {
+.contact-section h2 em,
+.contact-section h1 em {
     color: var(--coral);
+}
+
+.contact-page-section {
+    min-height: calc(100vh - 68px);
+    padding-top: 170px;
 }
 
 .email-link {
@@ -999,8 +1109,20 @@ h2 em {
         font-size: 9px;
     }
 
+    .page-hero {
+        padding: 125px 0 70px;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(3rem, 14vw, 5rem);
+    }
+
     .section {
         padding: 90px 0;
+    }
+
+    .page-section-reset {
+        padding-top: 90px;
     }
 
     .split-layout,
@@ -1030,6 +1152,20 @@ h2 em {
 
     .about-details article+article {
         margin-top: 18px;
+    }
+
+    .task-links-grid {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+
+    .task-card {
+        min-height: 210px;
+        padding: 22px;
+    }
+
+    .task-card h3 {
+        margin-top: 48px;
     }
 
     .skills-grid {
@@ -1090,6 +1226,10 @@ h2 em {
         padding: 90px 0;
     }
 
+    .research-page-band {
+        padding-top: 135px;
+    }
+
     .research-grid {
         display: block;
     }
@@ -1139,9 +1279,15 @@ h2 em {
         padding: 90px 0 55px;
     }
 
-    .contact-section h2 {
+    .contact-section h2,
+    .contact-section h1 {
         margin-top: 43px;
         font-size: 4.2rem;
+    }
+
+    .contact-page-section {
+        min-height: auto;
+        padding-top: 125px;
     }
 
     .email-link {
