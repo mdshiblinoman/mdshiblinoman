@@ -203,3 +203,119 @@ document.querySelectorAll('.project-carousel').forEach((carousel) => {
 
     updateStack();
 });
+
+const problemTabs = document.querySelectorAll('.platform-tab');
+const problemSearch = document.querySelector('#problem-search');
+const problemDifficulty = document.querySelector('#problem-difficulty');
+const problemTopic = document.querySelector('#problem-topic');
+const problemCards = Array.from(document.querySelectorAll('.problem-card'));
+const platformCards = document.querySelectorAll('.platform-card');
+const problemEmpty = document.querySelector('.problem-empty');
+const problemDialog = document.querySelector('#problem-dialog');
+const problemDialogClose = document.querySelector('.problem-dialog-close');
+const problemDialogPlatform = document.querySelector('#problem-dialog-platform');
+const problemDialogTitle = document.querySelector('#problem-dialog-title');
+const problemDialogId = document.querySelector('#problem-dialog-id');
+const problemDialogDifficulty = document.querySelector('#problem-dialog-difficulty');
+const problemDialogTopic = document.querySelector('#problem-dialog-topic');
+const problemDialogApproach = document.querySelector('#problem-dialog-approach');
+const problemDialogConcepts = document.querySelector('#problem-dialog-concepts');
+const problemDialogProblem = document.querySelector('#problem-dialog-problem');
+const problemDialogSolution = document.querySelector('#problem-dialog-solution');
+let activeProblemPlatform = 'All';
+
+const filterProblems = () => {
+    const searchValue = problemSearch.value.trim().toLowerCase();
+    const difficultyValue = problemDifficulty.value;
+    const topicValue = problemTopic.value;
+    let visibleCount = 0;
+
+    platformCards.forEach((card) => {
+        card.classList.toggle('is-active', card.dataset.platformCard === activeProblemPlatform);
+    });
+
+    problemCards.forEach((card) => {
+        const searchableText = [
+            card.dataset.platform,
+            card.dataset.difficulty,
+            card.dataset.topic,
+            card.dataset.id,
+            card.querySelector('h3').textContent,
+        ].join(' ').toLowerCase();
+
+        const matchesPlatform = activeProblemPlatform === 'All' || card.dataset.platform === activeProblemPlatform;
+        const matchesDifficulty = difficultyValue === 'All' || card.dataset.difficulty === difficultyValue;
+        const matchesTopic = topicValue === 'All' || card.dataset.topic.includes(topicValue);
+        const matchesSearch = !searchValue || searchableText.includes(searchValue);
+        const isVisible = matchesPlatform && matchesDifficulty && matchesTopic && matchesSearch;
+
+        card.classList.toggle('is-hidden', !isVisible);
+        if (isVisible) {
+            visibleCount += 1;
+        }
+    });
+
+    problemEmpty.hidden = visibleCount > 0;
+};
+
+const openProblemDialog = (card) => {
+    const solutionLink = card.dataset.solutionLink.trim();
+
+    problemDialogPlatform.textContent = card.dataset.platform;
+    problemDialogTitle.textContent = card.querySelector('h3').textContent;
+    problemDialogId.textContent = card.dataset.id;
+    problemDialogDifficulty.textContent = card.dataset.difficulty;
+    problemDialogTopic.textContent = card.dataset.topic;
+    problemDialogApproach.textContent = card.dataset.approach;
+    problemDialogConcepts.textContent = card.dataset.concepts;
+    problemDialogProblem.href = card.dataset.problemLink;
+    problemDialogSolution.href = solutionLink || '#';
+    problemDialogSolution.hidden = !solutionLink;
+    problemDialog.showModal();
+};
+
+problemTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+        activeProblemPlatform = tab.dataset.platform;
+        problemTabs.forEach((item) => item.classList.toggle('is-active', item === tab));
+        filterProblems();
+    });
+});
+
+platformCards.forEach((card) => {
+    card.addEventListener('click', (event) => {
+        if (event.target.closest('a')) {
+            return;
+        }
+
+        activeProblemPlatform = card.dataset.platformCard;
+        problemTabs.forEach((tab) => {
+            tab.classList.toggle('is-active', tab.dataset.platform === activeProblemPlatform);
+        });
+        filterProblems();
+    });
+});
+
+[problemSearch, problemDifficulty, problemTopic].forEach((control) => {
+    control.addEventListener('input', filterProblems);
+    control.addEventListener('change', filterProblems);
+});
+
+problemCards.forEach((card) => {
+    card.addEventListener('click', () => openProblemDialog(card));
+    card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openProblemDialog(card);
+        }
+    });
+});
+
+problemDialogClose.addEventListener('click', () => problemDialog.close());
+problemDialog.addEventListener('click', (event) => {
+    if (event.target === problemDialog) {
+        problemDialog.close();
+    }
+});
+
+filterProblems();
