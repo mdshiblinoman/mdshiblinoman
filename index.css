@@ -1227,60 +1227,6 @@ h2 em {
     outline-offset: 4px;
 }
 
-.project-dialog {
-    position: relative;
-    width: min(620px, calc(100% - 40px));
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 34px;
-    color: var(--ink);
-    background:
-        radial-gradient(circle at 92% 10%, rgba(233, 212, 118, .22), transparent 28%),
-        var(--surface-strong);
-    box-shadow: 0 30px 80px rgba(20, 33, 31, .28);
-}
-
-.project-dialog::backdrop {
-    background: rgba(20, 33, 31, .46);
-    backdrop-filter: blur(5px);
-}
-
-.project-dialog-close {
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    display: grid;
-    place-items: center;
-    width: 36px;
-    height: 36px;
-    border: 1px solid var(--line);
-    border-radius: 50%;
-    color: var(--ink);
-    background: transparent;
-    cursor: pointer;
-    font-size: 22px;
-    line-height: 1;
-}
-
-.project-dialog h3 {
-    margin: 34px 0 18px;
-    max-width: 460px;
-    font-size: clamp(2rem, 5vw, 3.6rem);
-    line-height: 1;
-    letter-spacing: -.06em;
-}
-
-.project-dialog p:not(.project-card-type) {
-    margin: 0;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-.project-dialog p+p {
-    margin-top: 18px;
-}
-
 .project-dialog-link {
     display: inline-block;
     margin-top: 32px;

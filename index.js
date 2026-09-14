@@ -27,29 +27,9 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-const projectDialog = document.querySelector('#project-dialog');
-const projectDialogClose = document.querySelector('.project-dialog-close');
-const projectDialogCategory = document.querySelector('#project-dialog-category');
-const projectDialogTitle = document.querySelector('#project-dialog-title');
-const projectDialogDescription = document.querySelector('#project-dialog-description');
-const projectDialogDetails = document.querySelector('#project-dialog-details');
-const projectDialogLink = document.querySelector('#project-dialog-link');
-
-const openProjectDialog = (card) => {
-    projectDialogCategory.textContent = card.querySelector('.project-card-type').textContent;
-    projectDialogTitle.textContent = card.querySelector('h4').textContent;
-    projectDialogDescription.textContent = card.querySelector('p').textContent;
-    projectDialogDetails.textContent = card.dataset.details;
-    projectDialogLink.href = card.dataset.github;
-    projectDialog.showModal();
+const openProjectRepository = (card) => {
+    window.open(card.dataset.github, '_blank', 'noopener,noreferrer');
 };
-
-projectDialogClose.addEventListener('click', () => projectDialog.close());
-projectDialog.addEventListener('click', (event) => {
-    if (event.target === projectDialog) {
-        projectDialog.close();
-    }
-});
 
 document.querySelectorAll('.project-carousel').forEach((carousel) => {
     const track = carousel.querySelector('.project-card-track');
@@ -119,7 +99,7 @@ document.querySelectorAll('.project-carousel').forEach((carousel) => {
         resetActiveCard();
 
         if (!didDrag) {
-            openProjectDialog(getActiveCard());
+            openProjectRepository(getActiveCard());
         }
     };
 
@@ -139,7 +119,7 @@ document.querySelectorAll('.project-carousel').forEach((carousel) => {
         card.addEventListener('keydown', (event) => {
             if (event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault();
-                openProjectDialog(card);
+                openProjectRepository(card);
             }
         });
     });
