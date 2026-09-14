@@ -624,67 +624,245 @@ h2 em {
     margin-top: 80px;
 }
 
-.project-group {
+.project-category {
     min-width: 0;
     padding-top: 24px;
     border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
 }
 
 .project-label {
-    margin: 0 0 38px;
+    margin: 0 0 26px;
     color: var(--coral);
     font: 11px var(--mono);
     letter-spacing: .08em;
     text-transform: uppercase;
 }
 
-.project-group h3 {
-    margin: 0 0 26px;
+.project-category h3 {
+    margin: 0 0 30px;
     font-size: clamp(1.75rem, 3vw, 3rem);
     line-height: 1;
     letter-spacing: -.04em;
 }
 
-.project-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.project-carousel {
+    position: relative;
 }
 
-.project-list li {
-    border-top: 1px solid var(--line);
-}
-
-.project-list a {
+.project-carousel-controls {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 22px;
-    min-height: 76px;
-    padding: 20px 0;
-    font-size: 17px;
-    font-weight: 800;
-    line-height: 1.25;
-    letter-spacing: -.035em;
-    transition: color .2s, padding-left .2s;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: -58px 0 18px;
 }
 
-.project-list a span {
-    flex: 0 0 auto;
+.carousel-button {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--ink);
+    background: rgba(244, 241, 235, .82);
+    cursor: pointer;
+    font: 700 16px var(--mono);
+    transition: color .2s, background .2s, border-color .2s, transform .2s;
+}
+
+.carousel-button:hover {
+    color: var(--paper);
+    background: var(--coral);
+    border-color: var(--coral);
+    transform: translateY(-2px);
+}
+
+.project-card-track {
+    display: grid;
+    min-height: 390px;
+    padding: 0 34px 38px 0;
+    overflow: hidden;
+    touch-action: pan-y;
+    user-select: none;
+}
+
+.project-card {
+    position: relative;
+    isolation: isolate;
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(244, 241, 235, .78);
+    box-shadow: 0 18px 40px rgba(20, 33, 31, .06);
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
+    transform: translateX(32px) scale(.9);
+    transform-origin: center;
+    transition: opacity .32s ease, transform .32s ease, box-shadow .32s ease;
+}
+
+.project-card:before,
+.project-card:after {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    z-index: -1;
+    border: 1px solid var(--line);
+    border-radius: inherit;
+    background: rgba(244, 241, 235, .7);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s, transform .2s;
+}
+
+.project-card:after {
+    inset: 24px;
+}
+
+.project-card.is-active {
+    z-index: 4;
+    opacity: 1;
+    pointer-events: auto;
+    cursor: grab;
+    transform: translateX(0) translateY(0) scale(1);
+    box-shadow: 0 22px 52px rgba(20, 33, 31, .13);
+}
+
+.project-card.is-dragging {
+    cursor: grabbing;
+    transition: none;
+}
+
+.project-card.is-exiting {
+    pointer-events: none;
+}
+
+.project-card.is-next {
+    z-index: 3;
+    opacity: .88;
+    transform: translateX(14px) translateY(16px) scale(.96);
+}
+
+.project-card.is-after {
+    z-index: 2;
+    opacity: .62;
+    transform: translateX(28px) translateY(32px) scale(.92);
+}
+
+.project-card.is-prev {
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(-32px) translateY(10px) scale(.9);
+}
+
+.project-card.is-active:before {
+    opacity: 1;
+    transform: translate(10px, 10px);
+}
+
+.project-card.is-active:after {
+    opacity: .82;
+    transform: translate(20px, 20px);
+}
+
+.project-card-type {
+    width: fit-content;
+    padding: 7px 10px;
+    color: var(--paper);
+    background: var(--ink);
+    font: 10px var(--mono);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.project-card h4 {
+    margin: 42px 0 14px;
+    font-size: clamp(1.35rem, 2.2vw, 2rem);
+    line-height: 1.05;
+    letter-spacing: -.045em;
+}
+
+.project-card>p {
+    margin: 0;
     color: var(--muted);
-    font-size: 18px;
-    transition: color .2s, transform .2s;
+    font-size: 13px;
+    line-height: 1.65;
 }
 
-.project-list a:hover {
-    color: var(--coral);
-    padding-left: 9px;
+.project-card:focus-visible {
+    outline: 3px solid rgba(231, 105, 77, .45);
+    outline-offset: 4px;
 }
 
-.project-list a:hover span {
-    color: var(--coral);
-    transform: translate(3px, -3px);
+.project-dialog {
+    position: relative;
+    width: min(620px, calc(100% - 40px));
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 34px;
+    color: var(--ink);
+    background: var(--paper);
+    box-shadow: 0 30px 80px rgba(20, 33, 31, .28);
+}
+
+.project-dialog::backdrop {
+    background: rgba(20, 33, 31, .46);
+    backdrop-filter: blur(5px);
+}
+
+.project-dialog-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--ink);
+    background: transparent;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.project-dialog h3 {
+    margin: 34px 0 18px;
+    max-width: 460px;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -.06em;
+}
+
+.project-dialog p:not(.project-card-type) {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.project-dialog p+p {
+    margin-top: 18px;
+}
+
+.project-dialog-link {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 14px 18px;
+    color: var(--paper);
+    background: var(--ink);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.project-dialog-link:hover {
+    background: var(--coral);
 }
 
 .research-band {
@@ -1223,13 +1401,27 @@ h2 em {
         margin-bottom: 28px;
     }
 
-    .project-group h3 {
+    .project-category h3 {
         font-size: 2.25rem;
     }
 
-    .project-list a {
-        min-height: 70px;
-        font-size: 15px;
+    .project-carousel-controls {
+        justify-content: flex-start;
+        margin: -10px 0 20px;
+    }
+
+    .project-card-track {
+        min-height: 410px;
+        padding-right: 26px;
+    }
+
+    .project-card {
+        min-height: 365px;
+        padding: 22px;
+    }
+
+    .project-card h4 {
+        margin-top: 36px;
     }
 
     .research-band {

@@ -171,34 +171,92 @@
                     <p>Small experiments, practical products, and research with a point of view.</p>
                 </div>
                 <div class="projects-grid">
-                    <article class="project-group reveal">
+                    <article class="project-category reveal">
                         <p class="project-label">Apps</p>
-                        <h3>Application Projects</h3>
-                        <ul class="project-list">
-                            <li><a href="https://github.com/mdshiblinoman/Campus-Marketplace-Android-APP"
-                                    target="_blank" rel="noreferrer">Campus Marketplace Android App <span>↗</span></a>
-                            </li>
-                            <li><a href="https://github.com/mdshiblinoman/DoctorFinderExpoApp" target="_blank"
-                                    rel="noreferrer">Doctor Finder Expo App <span>↗</span></a></li>
-                            <li><a href="https://github.com/mdshiblinoman/Meal-Managment-System-Expo-App"
-                                    target="_blank" rel="noreferrer">Meal Management System Expo App <span>↗</span></a>
-                            </li>
-                        </ul>
+                        <h3>Mobile App Projects</h3>
+                        <div class="project-carousel">
+                            <div class="project-carousel-controls" aria-label="Mobile app project carousel controls">
+                                <button class="carousel-button carousel-prev" type="button"
+                                    aria-label="Previous mobile app project">←</button>
+                                <button class="carousel-button carousel-next" type="button"
+                                    aria-label="Next mobile app project">→</button>
+                            </div>
+                            <div class="project-card-track" aria-live="polite" aria-label="Mobile app project cards">
+                                <article class="project-card" role="button" tabindex="0"
+                                    data-details="This project focuses on making student buying and selling easier with a practical Android experience for campus users."
+                                    data-github="https://github.com/mdshiblinoman/Campus-Marketplace-Android-APP">
+                                    <span class="project-card-type">Mobile app</span>
+                                    <h4>Campus Marketplace Android App</h4>
+                                    <p>A campus-focused marketplace app for students to list, browse, and manage useful
+                                        items inside an academic community.</p>
+                                </article>
+                                <article class="project-card" role="button" tabindex="0"
+                                    data-details="The app is built around a simple discovery flow so users can search, compare, and reach relevant medical support from a mobile interface."
+                                    data-github="https://github.com/mdshiblinoman/DoctorFinderExpoApp">
+                                    <span class="project-card-type">Mobile app</span>
+                                    <h4>Doctor Finder Expo App</h4>
+                                    <p>A mobile app concept for finding doctors and helping users connect with
+                                        healthcare options more quickly.</p>
+                                </article>
+                                <article class="project-card" role="button" tabindex="0"
+                                    data-details="This project turns a common group-living problem into a mobile workflow for tracking meals and reducing manual coordination."
+                                    data-github="https://github.com/mdshiblinoman/Meal-Managment-System-Expo-App">
+                                    <span class="project-card-type">Mobile app</span>
+                                    <h4>Meal Management System Expo App</h4>
+                                    <p>A meal management app for organizing shared meals, tracking daily activity, and
+                                        keeping group food planning clear.</p>
+                                </article>
+                            </div>
+                        </div>
                     </article>
-                    <article class="project-group reveal reveal-delay">
+                    <article class="project-category reveal reveal-delay">
                         <p class="project-label">RAG-Based Projects</p>
                         <h3>Voice-Agent &amp; AI Projects</h3>
-                        <ul class="project-list">
-                            <li><a href="https://github.com/mdshiblinoman/Voice-Agent" target="_blank"
-                                    rel="noreferrer">RAG-Based Telecom Support <span>↗</span></a></li>
-                            <li><a href="https://github.com/mdshiblinoman/RAG-Document-Q-A-Application" target="_blank"
-                                    rel="noreferrer">RAG Document Q&amp;A Application <span>↗</span></a></li>
-                            <li><a href="https://github.com/mdshiblinoman/Multimodal-Finance-Charge-Assistant"
-                                    target="_blank" rel="noreferrer">Multimodal-Finance-Charge-Assistant
-                                    <span>↗</span></a></li>
-                        </ul>
+                        <div class="project-carousel">
+                            <div class="project-carousel-controls" aria-label="RAG project carousel controls">
+                                <button class="carousel-button carousel-prev" type="button"
+                                    aria-label="Previous RAG project">←</button>
+                                <button class="carousel-button carousel-next" type="button"
+                                    aria-label="Next RAG project">→</button>
+                            </div>
+                            <div class="project-card-track" aria-live="polite" aria-label="RAG-based project cards">
+                                <article class="project-card" role="button" tabindex="0"
+                                    data-details="The project combines conversational AI with document retrieval so support responses can be grounded in relevant telecom knowledge."
+                                    data-github="https://github.com/mdshiblinoman/Voice-Agent">
+                                    <span class="project-card-type">RAG project</span>
+                                    <h4>RAG-Based Telecom Support</h4>
+                                    <p>A voice-agent support project that uses retrieval-augmented generation to answer
+                                        telecom-related questions.</p>
+                                </article>
+                                <article class="project-card" role="button" tabindex="0"
+                                    data-details="This project is designed to make document exploration easier by letting users ask questions and receive answers based on retrieved document content."
+                                    data-github="https://github.com/mdshiblinoman/RAG-Document-Q-A-Application">
+                                    <span class="project-card-type">RAG project</span>
+                                    <h4>RAG Document Q&amp;A Application</h4>
+                                    <p>A document question-answering app that retrieves context from files before
+                                        generating answers.</p>
+                                </article>
+                                <article class="project-card" role="button" tabindex="0"
+                                    data-details="The assistant explores multimodal AI workflows for finance scenarios where users need clearer explanations and contextual answers."
+                                    data-github="https://github.com/mdshiblinoman/Multimodal-Finance-Charge-Assistant">
+                                    <span class="project-card-type">RAG project</span>
+                                    <h4>Multimodal Finance Charge Assistant</h4>
+                                    <p>A finance-focused assistant concept that works with multiple input types to
+                                        support charge-related understanding.</p>
+                                </article>
+                            </div>
+                        </div>
                     </article>
                 </div>
+                <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
+                    <button class="project-dialog-close" type="button" aria-label="Close project details">×</button>
+                    <p class="project-card-type" id="project-dialog-category"></p>
+                    <h3 id="project-dialog-title"></h3>
+                    <p id="project-dialog-description"></p>
+                    <p id="project-dialog-details"></p>
+                    <a class="project-dialog-link" id="project-dialog-link" href="#" target="_blank"
+                        rel="noreferrer">View on GitHub <span>↗</span></a>
+                </dialog>
             </div>
         </section>
 
