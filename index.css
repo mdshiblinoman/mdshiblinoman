@@ -746,14 +746,6 @@ h2 em {
     letter-spacing: -.04em;
 }
 
-.platform-card strong {
-    display: block;
-    color: var(--coral);
-    font-size: 34px;
-    line-height: 1;
-    letter-spacing: -.06em;
-}
-
 .platform-card p {
     min-height: 68px;
     margin: 16px 0 20px;
