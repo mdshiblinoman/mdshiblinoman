@@ -204,6 +204,16 @@ const problemDialogProblem = document.querySelector('#problem-dialog-problem');
 const problemDialogSolution = document.querySelector('#problem-dialog-solution');
 let activeProblemPlatform = 'All';
 
+if (
+    problemTabs.length &&
+    problemSearch &&
+    problemDifficulty &&
+    problemTopic &&
+    problemCards.length &&
+    problemEmpty &&
+    problemDialog &&
+    problemDialogClose
+) {
 const filterProblems = () => {
     const searchValue = problemSearch.value.trim().toLowerCase();
     const difficultyValue = problemDifficulty.value;
@@ -299,3 +309,4 @@ problemDialog.addEventListener('click', (event) => {
 });
 
 filterProblems();
+}
